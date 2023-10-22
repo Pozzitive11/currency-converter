@@ -1,0 +1,28 @@
+<form class="currency-form">
+  <div class="currency">
+    <mat-form-field>
+      <input matInput type="number" [formControl]="amountFromControl" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Currency</mat-label>
+      <mat-select [formControl]="currencyFromControl" name="currencyFrom">
+        <mat-option *ngFor="let key of currencyKeys" [value]="key">
+          {{ key }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="currency">
+    <mat-form-field>
+      <input matInput type="number" [formControl]="amountToControl" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Currency</mat-label>
+      <mat-select [formControl]="currencyToControl" name="currencyTo">
+        <mat-option *ngFor="let key of currencyKeys" [value]="key">
+          {{ key }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</form>

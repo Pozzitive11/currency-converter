@@ -1,0 +1,8 @@
+<header class="header">
+  <h1 class="title">Курс валют</h1>
+  <div class="currency-rates">
+    <p>Курс USD: {{ usdRate | number : "1.2-2" }}</p>
+    <p>Курс EUR: {{ eurRate | number : "1.2-2" }}</p>
+  </div>
+</header>
+<app-currency-converter></app-currency-converter>
